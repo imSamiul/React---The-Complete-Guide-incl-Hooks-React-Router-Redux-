@@ -1,8 +1,61 @@
-.form {
-  background-color: #15172b;
-  border-radius: 20px;
+.card-front {
+  width: 40%;
+  height: 25%;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-49%, -49%);
+  display: inline-block;
+  background-color: #f5c7a9;
+  border-radius: 10px;
+  padding: 1% 1% 2% 1%;
+  min-height: 200px;
+}
+.form-style {
+  margin: 15px;
+}
+.form-style label {
+  display: block;
+  font-weight: 500;
+  font-size: 1.1rem;
+  /* margin: ; */
+  /* padding-top: 1.5em; */
+}
+input {
+  padding: 0.4rem;
+  display: block;
+  width: 95%;
+  position: relative;
+  margin: 0;
+  color: inherit;
+  border: none;
+  border-radius: 0.4rem;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+input:focus {
+  outline: none;
+  box-shadow: 0.2rem 0.4rem 0.5rem #d1512d;
+}
+
+.submitBtn {
+  background-color: #d1512d;
+  border-radius: 5px;
+  color: #f5e8e4;
+  padding: 0.3em;
+  text-align: center;
   box-sizing: border-box;
-  height: 250px;
-  padding: 20px;
-  width: 75%;
+  border: 0;
+  font-size: 1.1em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.submitBtn:not(:disabled):hover,
+.submitBtn:not(:disabled):focus {
+  outline: 0;
+  background: #f5e8e4;
+  color: #d1512d;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.15);
 }

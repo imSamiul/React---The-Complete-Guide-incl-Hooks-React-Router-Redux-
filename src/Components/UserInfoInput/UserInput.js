@@ -10,13 +10,17 @@ const UserInput = () => {
     setUserName(event.target.value);
   };
   return (
-    <div className="form">
-      <form onSubmit={handleSubmit}>
+    <div className="card-front">
+      <form className="form-style">
         <label>
-          Username:
-          <input type="text" value={userName} onChange={handleChange} />
+          Name:
+          <input type="text" name="name" />
         </label>
-        <input type="submit" value="Submit" />
+        <label>
+          Age:
+          <input type="text" name="age" />
+        </label>
+        <button className="submitBtn">Add User</button>
       </form>
     </div>
   );

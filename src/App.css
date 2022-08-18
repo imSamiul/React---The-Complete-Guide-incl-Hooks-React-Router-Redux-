@@ -1,7 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900");
 body {
-  align-items: center;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #411530;
+  background-color: #411530;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat.svg");
+  overflow-x: hidden;
 }
+/* https://colorhunt.co/palette/112b3c205375f66b0eefefef */
