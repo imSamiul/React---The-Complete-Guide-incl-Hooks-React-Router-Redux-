@@ -1,9 +1,14 @@
 import UserInput from "./Components/UserInfoInput/UserInput";
 import "./App.css";
-function App() {
+import { useState } from "react";
+function App(props) {
+  const [users, setUsers] = useState([]);
+  const onSaveDataHandler = (props) => {
+    setUsers((prevUsers) => [props, ...prevUsers]);
+  };
   return (
     <div className="App">
-      <UserInput></UserInput>
+      <UserInput onSaveData={onSaveDataHandler}></UserInput>
     </div>
   );
 }
