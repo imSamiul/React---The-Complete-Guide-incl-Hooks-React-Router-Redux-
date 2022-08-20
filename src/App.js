@@ -1,6 +1,7 @@
 import UserInput from "./Components/UserInfoInput/UserInput";
 import "./App.css";
 import { useState } from "react";
+import ShowUser from "./Components/Users/ShowUser";
 function App(props) {
   const [users, setUsers] = useState([]);
   const onSaveDataHandler = (props) => {
@@ -9,6 +10,7 @@ function App(props) {
   return (
     <div className="App">
       <UserInput onSaveData={onSaveDataHandler}></UserInput>
+      <ShowUser></ShowUser>
     </div>
   );
 }
