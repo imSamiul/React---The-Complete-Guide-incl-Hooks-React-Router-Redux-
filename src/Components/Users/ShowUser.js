@@ -1,8 +1,11 @@
-const ShowUser = () => {
-  return (
-    <div>
-      <h3 style={{ color: "#F5C7A9" }}>ShowUser is running.</h3>
-    </div>
-  );
+import "./ShowUser.css";
+const ShowUser = (props) => {
+  //   console.log(props);
+  const renderUser = props.users.map((user) => (
+    <li>
+      Name: {user.name} Age: {user.age}
+    </li>
+  ));
+  return <ul className="list">{renderUser}</ul>;
 };
 export default ShowUser;

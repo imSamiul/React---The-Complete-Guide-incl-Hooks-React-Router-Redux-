@@ -10,7 +10,7 @@ function App(props) {
   return (
     <div className="App">
       <UserInput onSaveData={onSaveDataHandler}></UserInput>
-      <ShowUser></ShowUser>
+      <ShowUser users={users}></ShowUser>
     </div>
   );
 }
