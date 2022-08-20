@@ -15,7 +15,8 @@ const UserInput = (props) => {
   };
   const onHandleSubmit = (event) => {
     event.preventDefault();
-    props.onSaveData(userData);
+    const data = { name: userData.name, age: userData.age, id: Math.random() };
+    props.onSaveData(data);
     setUserData({ name: "", age: "" });
   };
 
