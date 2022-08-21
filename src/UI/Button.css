@@ -1,0 +1,20 @@
+.submitBtn {
+  background-color: #d1512d;
+  border-radius: 5px;
+  color: #f5e8e4;
+  padding: 0.3em;
+  text-align: center;
+  box-sizing: border-box;
+  border: 0;
+  font-size: 1.1em;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+}
+
+.submitBtn:hover {
+  outline: 0;
+  background: #f5e8e4 !important;
+  color: #d1512d;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.15);
+}
