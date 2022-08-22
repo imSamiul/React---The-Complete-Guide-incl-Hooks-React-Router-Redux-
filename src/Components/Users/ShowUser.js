@@ -13,6 +13,6 @@ const ShowUser = (props) => {
   const render = props.users.length !== 0 && (
     <div className="userList">{renderUser}</div>
   );
-  return <div>{render}</div>;
+  return <>{render}</>;
 };
 export default ShowUser;

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "../../UI/Button";
 import ErrorModal from "../../UI/ErrorModal";
+import Wrapper from "../Helpers/Wrapper";
 import "./UserInput.css";
 const UserInput = (props) => {
   const [userData, setUserData] = useState({ name: "", age: "" });
@@ -42,7 +43,7 @@ const UserInput = (props) => {
   };
 
   return (
-    <div>
+    <Wrapper>
       {error && (
         <ErrorModal
           title={error.title}
@@ -75,7 +76,7 @@ const UserInput = (props) => {
           <Button text="Add User"></Button>
         </form>
       </div>
-    </div>
+    </Wrapper>
   );
 };
 export default UserInput;
