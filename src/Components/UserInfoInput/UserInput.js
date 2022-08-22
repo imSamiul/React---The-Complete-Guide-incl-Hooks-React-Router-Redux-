@@ -4,6 +4,7 @@ import ErrorModal from "../../UI/ErrorModal";
 import "./UserInput.css";
 const UserInput = (props) => {
   const [userData, setUserData] = useState({ name: "", age: "" });
+  const [error, setError] = useState();
 
   const onNameChangeHandler = (event) => {
     setUserData((prevState) => {
@@ -17,17 +18,38 @@ const UserInput = (props) => {
   };
   const onHandleSubmit = (event) => {
     event.preventDefault();
+    if (userData.name.trim().length === 0 || userData.age.trim().length === 0) {
+      setError({
+        title: "Invalid input",
+        message: "Please enter a valid name and age (non-empty values).",
+      });
+      return;
+    }
+    if (+userData.age < 1) {
+      //Unary plus
+      setError({
+        title: "Invalid age",
+        message: "Please enter a valid age (>0).",
+      });
+      return;
+    }
     const data = { name: userData.name, age: userData.age, id: Math.random() };
     props.onSaveData(data);
     setUserData({ name: "", age: "" });
   };
+  const errorHandler = () => {
+    setError(null);
+  };
 
   return (
     <div>
-      <ErrorModal
-        title="An error occured"
-        message="Somthing went wrong"
-      ></ErrorModal>
+      {error && (
+        <ErrorModal
+          title={error.title}
+          message={error.message}
+          onConfirm={errorHandler}
+        ></ErrorModal>
+      )}
       <div className="card-front" onSubmit={onHandleSubmit}>
         <form className="form-style">
           <label>
@@ -37,7 +59,6 @@ const UserInput = (props) => {
               name="name"
               value={userData.name}
               placeholder="Please enter your name."
-              required
               onChange={onNameChangeHandler}
             />
           </label>
@@ -48,7 +69,6 @@ const UserInput = (props) => {
               name="age"
               value={userData.age}
               placeholder="Please enter your age."
-              required
               onChange={onAgeChangeHandler}
             />
           </label>

@@ -2,22 +2,20 @@ import Button from "./Button";
 import "./ErrorModal.css";
 const ErrorModal = (props) => {
   return (
-    <div id="disclaimer" className="modal-container">
-      <section className="modal">
+    <div id="disclaimer" className="modal-container" onClick={props.onConfirm}>
+      <section
+        className="modal"
+        onClick={(e) => {
+          // do not close modal if anything inside modal content is clicked
+          e.stopPropagation();
+        }}
+      >
         <header className="modal-header">
-          <h2 className="modal-title">Destination: Moon Disclaimer</h2>
-          <a href="#" className="modal-close">
-            Close
-          </a>
+          <h2 className="modal-title">{props.title}</h2>
+          <Button text="Close" onClick={props.onConfirm}></Button>
         </header>
         <div className="modal-content">
-          <p>
-            <strong>Disclaimer:</strong> Vastness is bearable only through love
-            emerged into consciousness not a sunrise but a galaxyrise emerged
-            into consciousness courage of our questions across the centuries and
-            billions upon billions upon billions upon billions upon billions
-            upon billions upon billions.
-          </p>
+          <p>{props.message}</p>
         </div>
       </section>
     </div>

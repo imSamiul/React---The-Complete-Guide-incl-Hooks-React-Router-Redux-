@@ -57,7 +57,7 @@
   background-color: black;
   display: flex;
   /* opacity: 0; */
-  pointer-events: none;
+  /* pointer-events: none; */
   transition: opacity 250ms ease;
   background-color: rgba(0, 0, 0, 0.75);
 }
@@ -94,44 +94,6 @@
   color: white;
 }
 
-.modal-close {
-  color: transparent;
-  display: block;
-  height: 1.5rem;
-  width: 1.5rem;
-  overflow: hidden;
-  background-image: linear-gradient(
-      to top right,
-      transparent 48%,
-      white 48%,
-      white 52%,
-      transparent 52%
-    ),
-    linear-gradient(
-      to top left,
-      transparent 48%,
-      white 48%,
-      white 52%,
-      transparent 52%
-    );
-}
-.modal-close:hover,
-.modal-close:focus {
-  background-image: linear-gradient(
-      to top right,
-      transparent 46%,
-      white 46%,
-      white 54%,
-      transparent 54%
-    ),
-    linear-gradient(
-      to top left,
-      transparent 46%,
-      white 46%,
-      white 54%,
-      transparent 54%
-    );
-}
 .modal-content {
   color: white;
   border-radius: 0 0 1.5rem 1.5rem;
