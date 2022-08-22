@@ -1,24 +1,24 @@
+import React from "react";
 import Button from "./Button";
 import "./ErrorModal.css";
+
 const ErrorModal = (props) => {
   return (
-    <div id="disclaimer" className="modal-container" onClick={props.onConfirm}>
-      <section
-        className="modal"
-        onClick={(e) => {
-          // do not close modal if anything inside modal content is clicked
-          e.stopPropagation();
-        }}
-      >
-        <header className="modal-header">
-          <h2 className="modal-title">{props.title}</h2>
-          <Button text="Close" onClick={props.onConfirm}></Button>
+    <div>
+      <div className="backdrop " onClick={props.onConfirm} />
+      <div className="modal">
+        <header className="header">
+          <h2>{props.title}</h2>
         </header>
-        <div className="modal-content">
+        <div className="content">
           <p>{props.message}</p>
         </div>
-      </section>
+        <footer className="actions">
+          <Button text="Okey" onClick={props.onConfirm}></Button>
+        </footer>
+      </div>
     </div>
   );
 };
+
 export default ErrorModal;

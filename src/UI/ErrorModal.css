@@ -1,4 +1,4 @@
-/* .backdrop {
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -14,21 +14,26 @@
   left: 10%;
   width: 80%;
   z-index: 100;
-  overflow: hidden;
+  /* overflow: hidden; */
+  background: #411530;
+  border-radius: 15px;
 }
 
 .header {
-  background: #4f005f;
+  background: #f5e8e4;
   padding: 1rem;
+  border-radius: 10px 10px 0 0;
 }
 
 .header h2 {
   margin: 0;
-  color: white;
+  color: #411530;
 }
 
 .content {
   padding: 1rem;
+  color: #f5e8e4;
+  font-size: 1.2rem;
 }
 
 .actions {
@@ -43,11 +48,10 @@
     width: 40rem;
   }
 }
-.button:hover {
-  background-color: #2d566b;
-} */
 
-.modal-container {
+/* ---------------------------MY OWN-------------------------- */
+
+/* .modal-container {
   position: fixed;
   top: 0;
   right: 0;
@@ -56,8 +60,7 @@
   z-index: 1000;
   background-color: black;
   display: flex;
-  /* opacity: 0; */
-  /* pointer-events: none; */
+
   transition: opacity 250ms ease;
   background-color: rgba(0, 0, 0, 0.75);
 }
@@ -99,4 +102,4 @@
   border-radius: 0 0 1.5rem 1.5rem;
   border: 4px solid #f7baf744;
   border-top: none;
-}
+} */
